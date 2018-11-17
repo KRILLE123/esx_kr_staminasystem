@@ -7,7 +7,7 @@ If there is any issues with the script feel free to contact me on discord: KRILL
 
 **For those who use esx_gym by Panda can use the following example**
 
-**ROW ~224, make sure to use TriggerServerEvent('skill:GymUpdate') on ALL the exercises AND not only the example below!**
+**ROW ~224, make sure to use TriggerServerEvent('skill:GymUpdate') on ALL the exercises AND not ONLY the example below!**
 ```
 Citizen.CreateThread(function()
     while true do
