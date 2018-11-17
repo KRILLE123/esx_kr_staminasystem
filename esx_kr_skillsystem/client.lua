@@ -87,16 +87,16 @@ Citizen.CreateThread(function()
 ESX.TriggerServerCallback('skill:get', function( data )
 
 if tonumber(data[1].gym) < 25 then
+  RestorePlayerStamina(PlayerId(), 0.1)
   elseif tonumber(data[1].gym) < 50 then
-    RestorePlayerStamina(PlayerId(), 1.0)
+    RestorePlayerStamina(PlayerId(), 0.2)
       elseif tonumber(data[1].gym) < 75 then
-        RestorePlayerStamina(PlayerId(), 1.0)
+        RestorePlayerStamina(PlayerId(), 0.3)
           elseif tonumber(data[1].gym) < 100 then
-            RestorePlayerStamina(PlayerId(), 1.0)
+            RestorePlayerStamina(PlayerId(), 0.4)
               elseif tonumber(data[1].gym) > 100 then
-                RestorePlayerStamina(PlayerId(), 1.0)
-              
-              end
-           end)
-        end
+                RestorePlayerStamina(PlayerId(), 0.4)
+                end
+            end)
+         end
      end)
