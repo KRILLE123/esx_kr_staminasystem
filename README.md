@@ -6,6 +6,7 @@ If there is any issues with the script feel free to contact me on discord: KRILL
 **Use TriggerServerEvent('skill:GymUpdate') in your gym script. This adds 3% gym-skill, you lose 5% everyday.**
 
 **For those who use esx_gym by Panda can use the following example**
+
 **ROW 211**
 ```
 Citizen.CreateThread(function()
