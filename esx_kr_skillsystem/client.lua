@@ -38,25 +38,25 @@ ESX.TriggerServerCallback('skill:get', function( data )
     local elements = {}
 
     if tonumber(data[1].gym) < 25 then
-    table.insert(elements, {label = 'Kondition: Dålig', value = ''})
+    table.insert(elements, {label = 'Stamina: Bad', value = ''})
 
     elseif tonumber(data[1].gym) < 50 then
-    table.insert(elements, {label = 'Kondition: Hyfsad', value = ''})
+    table.insert(elements, {label = 'Stamina: Okay', value = ''})
 
     elseif tonumber(data[1].gym) < 75 then
-    table.insert(elements, {label = 'Kondition: Bra', value = ''})
+    table.insert(elements, {label = 'Stamina: Good', value = ''})
 
     elseif tonumber(data[1].gym) < 100 then
-    table.insert(elements, {label = 'Kondition: Max', value = ''})
+    table.insert(elements, {label = 'Stamina: Max', value = ''})
 
     elseif tonumber(data[1].gym) > 100 then
-    table.insert(elements, {label = 'Kondition: Max', value = ''})
+    table.insert(elements, {label = 'Stamina: Max', value = ''})
   end
 
   ESX.UI.Menu.Open(
-    'default', GetCurrentResourceName(), 'hotell',
+    'default', GetCurrentResourceName(), 'Skills',
     {
-      title    = 'Färdigheter',
+      title    = 'Stamina',
       align    = 'left',
       elements = elements
     },
