@@ -10,9 +10,7 @@ ESX.RegisterServerCallback('skill:get', function(source, cb)
     'SELECT gym, gymstatus FROM skill WHERE identifier = @identifier',{['@identifier'] = identifier},
     function(result)
     	cb(result)
-      print('ute')
     if result[1] == nil then
-      print('inne')
       MySQL.Async.execute('INSERT INTO skill (identifier, gym, gymstatus) VALUES (@identifier, @gym, @gymstatus)',
         {
           ['@identifier']    = identifier,
@@ -41,7 +39,6 @@ AddEventHandler('skill:GymUpdate', function()
 end)
 
 function gym(d, h, m)
-  print('hello')
   MySQL.Async.fetchAll('SELECT * FROM skill WHERE gymstatus = 1', {}, function (result)
     for i=1, #result, 1 do
 
