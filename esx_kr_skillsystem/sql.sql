@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS `skill` (
   `gymstatus` varchar(255) NOT NULL,
   PRIMARY KEY (`identifier`)
 )
-COLLATE='utf8mb4_unicode_ci'
+COLLATE='latin_swedish_ci'
 ENGINE=InnoDB
 ;
